@@ -64,11 +64,28 @@ void showBilling(BuildContext context) {
               Expanded(
                 child: Container(), // takes all remaining space
               ),
-              Container(  
+              Container(
                 width: 400,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   color: Colors.blueAccent,
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                      children: [
+                        Spacer(),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          icon: Icon(Icons.close),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ],
